@@ -1,0 +1,19 @@
+{
+  "name": "electronics-store",
+  "version": "1.0",
+  "homepage": "This is an online store made in bright colors",
+  "description": "",
+  "keywords": [
+    "widget",
+    "sait",
+    "product",
+    "electrinics",
+    "store"
+  ],
+  "authors": [
+    "Inkarbekov Begzat <rebelliousspirit111@gmail.com>"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}

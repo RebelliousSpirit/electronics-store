@@ -1,0 +1,212 @@
+
+.header__box_top
+	position: relative
+	z-index: 100
+
+.header__phone-link
+	font-size: 16px
+	text-transform: uppercase
+	padding:
+		top: 16px
+	margin: 0
+	a
+		margin:
+			left: 15px
+
+.user-account, .cart-holder
+	display: inline-block
+	float: right
+
+.user-account__title, .cart-holder__title
+	padding: 16px 20px
+	margin: 0
+	border: none
+	border: 
+		left: 1px solid $border
+	transition: 0.3s ease
+	background-color: transparent
+	&:hover
+		cursor: pointer
+		background-color: $accent
+		color: #fff
+
+.cart-holder__title
+	border: 
+		right: 1px solid $border
+
+.user-account__title:before, .cart-holder__title:before
+	font-family: 'icomoon' !important
+	display: block
+	speak: none
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	text-transform: none
+	line-height: 1
+
+.user-account__title:before
+	content: "\f0c9"
+
+.cart-holder__title:before
+	content: "\f07a"
+	
+.user-account__menu,.cart-holder__list
+	background-color: #fff
+	padding: 25px 15px
+	border: 1px solid $border
+	ul
+		margin: 0
+		padding: 0
+		
+.user-account__list, .cart-holder__list
+	li
+		margin-bottom: 10px
+		a
+			text-decoration: none
+			.icon
+				margin-right: 5px
+
+.user-account, .cart-holder
+	.active:before
+		content: "\f00d"	
+
+.addon-nav
+	font-weight: 500
+	ul
+		margin: 0
+		padding: 0
+
+.addon-nav__list
+	margin: 0
+	padding: 0
+
+.addon-nav__list-item
+	font-size: 12px
+	text-transform: uppercase
+	margin: 
+		bottom: 10px
+
+.addon-nav__title
+	font-size: 14px
+	font-weight: 700
+	margin:
+		bottom: 15px
+	text-transform: uppercase
+
+.header__navbar_bottom
+	position: relative
+	display: flex
+	justify-content: space-between 
+	align-items: center
+	padding: 25px 0
+	.fixed-nav
+		padding: 15px
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		background-color: $bg-second
+		z-index: 9000
+		.nav__list
+			.nav__sub-nav
+				margin-top: 15px
+				border: 1px solid $border
+
+.header__nav
+	&>ul
+		margin: 0
+		padding: 0
+		li+li
+			margin-left: 25px
+		a
+			font-weight: 700
+			text-transform: uppercase
+		.nav__item-has-children>a:after			
+				font-family: 'icomoon' !important
+				content: "\f103"
+				display: inline-block
+				speak: none
+				font-style: normal
+				font-weight: normal
+				font-variant: normal
+				text-transform: none
+				line-height: 1
+				margin-left: 5px
+		.nav__item-current
+			a
+				color: $accent
+	.nav__sub-nav
+		width: 150px
+		border: none
+		border:
+			top: 1px solid $border
+		margin-top: 41px
+		li
+			margin:
+				left: 0
+			a
+				font-size: 12px
+				font-weight: 400
+				&:before
+					font-family: 'icomoon' !important
+					content: "\f101"
+					display: inline-block
+					speak: none
+					font-style: normal
+					font-weight: normal
+					font-variant: normal
+					text-transform: none
+					line-height: 1
+					margin-right: 15px
+
+.header__search
+	form
+		position: relative
+.header__search-field
+	width: 270px
+	height: 50px
+.header__search-submit
+	position: absolute
+	width: 46px
+	height: 46px
+	top: 2px
+	right: 2px
+
+//slider styles
+.main-slider__slide
+	height: 530px
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	position: relative
+
+.main-slider__slide-one
+	background-image: url(../img/@2x/slide-1.png)
+
+.main-slider__slide-second
+	background-image: url(../img/@2x/slide-2.png)
+
+.main-slider__dots
+	position: absolute
+	bottom: 26px
+	left: 5%
+	margin: 0
+	padding: 0
+	li
+		display: inline-block
+		button
+			width: 16px
+			height: 16px
+			border: none
+			background-color: $btn-color
+			transition: 0.3s
+			margin: 7px
+	.slick-active
+		button
+			background-color: $hover 		
+
+/* gallery header styles*/
+.gallery-header
+	.header__navbar_bottom
+		.nav__sub-nav
+			border: 1px solid $border

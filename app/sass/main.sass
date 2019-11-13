@@ -1,6 +1,12 @@
 @import vars
 @import fonts
 @import libs
+@import custom
+@import header
+@import content
+@import sidebar
+@import footer
+@import media
 
 ::placeholder
 	color: #666
@@ -17,46 +23,43 @@ input, textarea
 		border-color: green
 
 body
-	font-size: 16px
+	font-size: 14px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
-	font-family: 'Roboto', sans-serif
+	line-height: 17px
+	font-family: 'PT Sans', sans-serif
 	overflow-x: hidden
 	color: $text
+	background-color: $bg-primary
+	text-align: left
+a
+	color: $link
+	transition: 0.3s ease
+	&:hover, &:focus, &:active
+		color: $hover
+		text-decoration: none
 
-// Custom Sass / Remove before use
-
-.container
-	max-width: 700px
-	padding:
-		right: $gutter/2
-		left: $gutter/2
-	margin:
-		left: auto
-		right: auto
-
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-
-.example-grid
-	display: grid
-	grid-gap: $gutter
-	grid-template-columns: 1fr 1fr
-	grid-template-areas: "left right"
-	> div:first-child
-		grid-area: left
-	> div:last-child
-		grid-area: right
-	+media-breakpoint-down(xs)
-		display: block
-		> div
-			padding: $gutter/2 0
-	
-.example-img
+img
 	width: 100%
+	height: auto
+	transition: 0.3s ease
+	&:hover
+		transform: scale3d(1.02, 1.02, 1.02)		
 
-.parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
-	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+
+ul, li
+	list-style: none
+
+button:focus
+	outline: none
+
+h1, h2, h3, h4, h5
+	color: $title
+	font-weight: 700
+	margin-bottom: 20px
+
+select
+	max-width: 100%
+	border: 1px solid $border
+	&:focus
+		outline: none
