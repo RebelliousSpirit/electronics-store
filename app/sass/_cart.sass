@@ -1,0 +1,80 @@
+/**
+ * cart page styles
+ */
+.cart 
+	margin-bottom: 35px
+
+.cart__form-field
+	border: 1px solid $border
+	padding: 10px
+	padding:
+		left: 25px
+	&:focus
+		border:
+			color: $border-dark
+
+.cart__submit
+	border: none
+	text-transform: uppercase
+	text-decoration: underline
+	color: $link
+	transition: 0.3s
+	background-color: transparent
+	&:hover	
+		color: $hover
+
+.cart__table
+	width: 100%
+	border: 1px solid $border
+
+.cart__table-head
+	background-color: #F9E3FF
+
+.cart__table
+	th
+		border: 1px solid $border
+	th, td 
+		padding: 10px
+
+.cart__item-img
+	a>img
+		width: 32px
+		height: 32px
+
+.cart__actions
+	border:
+		top: 1px solid $border
+
+.cart__coupon
+	width: 45%
+	float: left
+	text-align: left
+	.cart__form-field
+		width: 150px
+
+.cart__apply-coupon
+	display: inline
+	vertical-align: middle
+	margin-left: 15px 
+	
+
+.cart__update
+	width: 30%
+	float: right
+	text-align: right
+	vertical-align: middle
+
+
+.cart__total
+	width: 50%
+	padding-top: 17px
+
+.cart__subtotal, .cart__order-total
+	th
+		background-color: #F9E3FF
+
+.cart__proceed-to-checkout
+	display: block
+	text-align: left
+	margin-top: 25px
+

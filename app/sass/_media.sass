@@ -31,8 +31,11 @@
 			width: 370px
 		.nav__list
 			flex-direction: column
-			li
+			.nav__item
 				margin-left: 0
+				padding: 0
+				&:hover .nav__sub-nav
+					display: none
 				a
 					color: #fff
 					background-color: $btn-bg
@@ -68,6 +71,47 @@
 	.service__box
 		padding: 15px 25px
 
+	.cart__table-main
+		th, td
+			padding: 5px
+		.cart__item-total
+			display: none
+		.cart__item-quantity
+			border:
+				right: 1px solid $border
+		.cart__coupon, .cart__update
+			float: none
+
+		.cart__coupon
+			width: 100%
+			text-align: center
+			margin-bottom: 25px
+			.cart__form-field
+				width: 200px
+				margin-bottom: 15px
+
+	.addon-product__images
+		margin: 0
+		margin-bottom: 45px
+	
+	.addon-product__images-list
+		width: 100%
+		max-width: 100%
+		padding: 25px 0
+	
+	.addon-product__images-item
+		width: 24%
+	
+	.addon-product__image_large
+		max-width: 325px
+		height: 325px
+	
+	.addon-product__summary
+		max-width: 325px
+
+	.addon-product__tabs 
+		.addon-product__tabs-panel
+			max-width: 325px
 	.footer
 		.addon-nav
 			text-align: center			
@@ -110,13 +154,13 @@
 			border: 1px solid $border
 		.cart-holder__title
 			border: none
-
+		.cart-holder__title, .user-account 
+			border:
+				left: 1px solid $border
 	.header__navbar_bottom
 		flex-direction: column
 		.header__logo
 			display: none
-		.header__nav
-			padding: 30px 0
 		.addon-form__field
 			width: 370px
 		.nav__list
@@ -137,7 +181,12 @@
 
 	.service__box
 		padding: 0 15px
+
+	.cart__table
+		.cart__item-total
+			display: none	
 	
+
 	.footer
 		.addon-nav
 			text-align: center			
@@ -154,12 +203,13 @@
 				.addon-form__submit
 					float: left
 @media (min-width: 768px) and (max-width: 992px)
+	.cart-holder__title, .user-account 
+		border:
+			left: 1px solid $border
 	.header__navbar_bottom
 		flex-direction: column
 		.header__logo
 			display: none
-		.header__nav
-			padding: 30px 0
 		.addon-form__field
 			width: 370px
 		.nav__list
@@ -181,6 +231,9 @@
 				display: none
 
 @media (min-width: 992px) and (max-width: 1140px)
+	.cart-holder__title, .user-account 
+		border:
+			left: 1px solid $border
 	.col-lg-4:nth-child(3n+3)
 		.addon-banner	
 			&:after
@@ -197,6 +250,9 @@
 					width: 265px
 
 @media (min-width: 1140px)
+	.cart-holder__title, .user-account 
+		border:
+			left: 1px solid $border
 	.col-xl-3:nth-child(4n+4)
 		.addon-banner	
 			&:after

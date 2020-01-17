@@ -4,6 +4,8 @@
 @import custom
 @import header
 @import content
+@import product
+@import cart
 @import sidebar
 @import footer
 @import media
@@ -25,7 +27,6 @@ input, textarea
 body
 	font-size: 14px
 	min-width: 320px
-	position: relative
 	line-height: 17px
 	font-family: 'PT Sans', sans-serif
 	overflow-x: hidden
@@ -37,14 +38,7 @@ a
 	transition: 0.3s ease
 	&:hover, &:focus, &:active
 		color: $hover
-		text-decoration: none
-
-img
-	width: 100%
-	height: auto
-	transition: 0.3s ease
-	&:hover
-		transform: scale3d(1.02, 1.02, 1.02)		
+		text-decoration: none	
 
 
 ul, li

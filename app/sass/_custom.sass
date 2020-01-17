@@ -1,3 +1,7 @@
+.page-holder
+	position: relative
+	overflow: hidden
+
 .container
 	max-width: 1170px
 	padding:
@@ -28,6 +32,13 @@
 	
 .example-img
 	width: 100%
+
+.zoom-img
+	width: 100%
+	height: auto
+	transition: 0.3s ease
+	&:hover
+		transform: scale3d(1.02, 1.02, 1.02)	
 
 .thumbnail-primary
 	margin:
@@ -86,17 +97,21 @@
 		justify-content: center
 		li
 			position: relative
-	.nav__sub-nav
-		display: none
-		position: absolute
-		background-color: #fff
-		padding: 25px 15px
-		border: 1px solid $border
-		top: 100%
-		left: 0
-		z-index: 10000
-		li
-			margin-bottom: 10px
+
+.nav__sub-nav
+	display: none
+	position: absolute
+	background-color: #fff
+	padding: 25px 15px
+	border: 1px solid $border
+	z-index: 10000
+	&:hover
+		display: block
+	li
+		margin-bottom: 10px
+
+.nav__item:hover .nav__sub-nav
+	display: block
 
 //form styles
 .addon-form__field
@@ -211,7 +226,7 @@
 	color: #fff
 	padding: 0 15px		
 	figure
-		max-width: 45%
+		max-width: 35%
 		margin: 10px auto
 		padding: 45px 0
 		img:hover
