@@ -16,7 +16,7 @@ gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
 			baseDir: 'app',
-			index: 'product.html'
+			index: 'index.html'
 		},
 		notify: false,
 		// online: false, // Work offline without internet connection
@@ -29,12 +29,11 @@ function bsReload(done) { browserSync.reload(); done(); };
 gulp.task('styles', function() {
 	return gulp.src('app/sass/**/*.sass')
 	.pipe(sass({ outputStyle: 'expanded' }))
-	.pipe(concat('styles.min.css'))
+	.pipe(concat('styles.css'))
 	.pipe(autoprefixer({
 		grid: true,
 		overrideBrowserslist: ['last 10 versions']
-	}))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
+	}))	
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.stream())
 });
@@ -131,6 +130,13 @@ gulp.task('bild',function (){
 	var bildCss = gulp.src([
 		'app/css/**/*.css'
 	])
+	.pipe(gulp.dest('dist/css'));
+
+	var bildMinCss = gulp.src([
+		'app/css/styles.css'
+	])
+	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
+	.pipe(rename('styles.min.css'))
 	.pipe(gulp.dest('dist/css'));
 
 	var bildFonts = gulp.src('app/fonts/**/*.*')
