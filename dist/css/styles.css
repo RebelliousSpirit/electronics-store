@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.addon-quick-view, .addon-open-cart, .addon-info, .addon-to-compare, .addon-heart, .link-add-to-wishlist, .link-add-compare, .contacts__adress:before, .contacts__phone:before, .contacts__fax:before, .contacts__email:before, .contacts__field-name:before, .contacts__field-email:before, .contacts__field-phone:before, .contacts__field-message:before, .products-categories li:before {
+.addon-quick-view, .addon-open-cart, .addon-info, .addon-to-compare, .addon-heart, .link-add-to-wishlist, .link-add-compare, .contacts__adress:before, .contacts__phone:before, .contacts__fax:before, .contacts__email:before, .contacts__field-name:before, .contacts__field-email:before, .contacts__field-phone:before, .contacts__field-message:before, .products-categories li:before, .products-categories__submenu li:before {
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -4702,11 +4702,6 @@ html {
   }
 }
 
-.page-holder {
-  position: relative;
-  overflow: hidden;
-}
-
 .container {
   max-width: 1170px;
   padding-right: 15px;
@@ -4981,28 +4976,44 @@ html {
   width: 100%;
   height: 100%;
   background-color: rgba(62, 57, 64, 0.8);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 10000;
   display: none;
 }
 
+.modal-window figcaption {
+  text-align: center;
+  font-size: 17px;
+}
+
+.modal-window .addon-product__description {
+  text-align: left;
+  display: block;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 15px 0;
+  font-size: 16px;
+}
+
 .modal-window__wrap {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   text-align: center;
   color: #fff;
-  padding: 0 15px;
+  padding: 50px 15px;
 }
 
 .modal-window__wrap figure {
   max-width: 35%;
-  margin: 10px auto;
-  padding: 45px 0;
+  height: 30%;
+  padding: 20px;
+  float: left;
+}
+
+.modal-window__wrap figure img {
+  margin: 0;
 }
 
 .modal-window__wrap figure img:hover {
@@ -5012,7 +5023,23 @@ html {
 }
 
 .modal-window__wrap figure figcaption {
-  padding-top: 25px;
+  padding-top: 10px;
+}
+
+.modal-window__close {
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.modal-window__close:hover {
+  cursor: pointer;
+  color: #E0CCE6;
 }
 
 .modal-window-show .modal-window__wrap {
@@ -5417,6 +5444,12 @@ html {
 }
 
 /* index page styles */
+.page-holder {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 .addon-section {
   padding-top: 30px;
   text-align: center;
@@ -5601,7 +5634,7 @@ html {
   color: #3E3940;
 }
 
-.addon-breadcrumb .active {
+.addon-breadcrumb ul li:last-child {
   color: #7C7180;
 }
 
@@ -5735,11 +5768,11 @@ html {
 /* end */
 /* shop page styles */
 /* end */
-.ordering {
+.ordering, .product-count {
   margin-bottom: 10px;
 }
 
-.ordering select {
+.ordering select, .product-count select {
   height: 30px;
   max-height: 200px;
   font-size: 14px;
@@ -5748,14 +5781,20 @@ html {
   border: 1px solid #E0CCE6;
 }
 
-.ordering select:focus {
+.ordering select:focus, .product-count select:focus {
   border-color: #3E3940;
+}
+
+.product-count {
+  float: right;
+  vertical-align: top;
 }
 
 .result-count {
   font-size: 12px;
   color: #7C7180;
   text-align: left;
+  float: left;
 }
 
 /* contact page styles */
@@ -5974,13 +6013,15 @@ html {
 }
 
 .addon-product__list-link .tooltip-inner {
-  line-height: 12px;
+  line-height: 17px;
   top: 0;
   right: 65px;
 }
 
 .addon-product__list-link:hover {
+  cursor: pointer;
   background-color: #42244A;
+  color: #fff;
 }
 
 .addon-product__list-link:hover .tooltip-inner {
@@ -5990,6 +6031,10 @@ html {
 
 .addon-product__list-link:nth-child(-n+4) {
   border-bottom: none;
+}
+
+.addon-product__description {
+  display: none;
 }
 
 .addon-product__caption h5 {
@@ -6331,6 +6376,18 @@ html {
 
 .products-categories li:before {
   content: '\f105';
+  margin-right: 5px;
+}
+
+.products-categories__submenu {
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+  padding-top: 10px;
+}
+
+.products-categories__submenu li:before {
+  content: '\f104';
   margin-right: 5px;
 }
 

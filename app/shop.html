@@ -6,9 +6,9 @@
 	<meta charset="utf-8">
 
 	<title>electronics store</title>
-	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<meta name="description" content="Startup HTML template OdivtimizedHTML 5">
 
-	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<meta name="viewport" content="width=device-width initidivl-scale=1.0">
 
 	<link rel="icon" href="img/favicon.png">
 	<meta property="og:image" content="img/@1x/preview.jpg">
@@ -18,7 +18,7 @@
 
 <body class="shop-page">
 	<div class="page-holder">
-		<header class="header gallery-header">
+		<header class="header">
 			<div class="container">
 				<div class="row header__box_top box">
 					<div class="col-md-6 col-sm-12 col-12">
@@ -29,13 +29,13 @@
 					</div>
 					<div class="col-md-6 col-sm-12 col-12 clear">
 						<div class="cart-holder dropdown">
-							<h4 class="cart-holder__title dropdown-btn"></h4>
+							<button class="cart-holder__title dropdown-btn"></button>
 							<div class="dropdown-menu cart-holder__list" data-toggle>
 								<p>Товаров нет...</p>
 							</div>
 						</div>
 						<div class="user-account dropdown">
-							<h4 class="user-account__title dropdown-btn"></h4>
+							<button class="user-account__title dropdown-btn"></button>
 							<div class="dropdown-menu user-account__menu" data-toggle>
 								<ul class="user-account__list">
 									<li>
@@ -68,7 +68,8 @@
 				<!-- .row -->
 				<div class="header__navbar_bottom">
 					<div class="header__logo">
-						<img src="img/@1x/logo.png" alt="логотип" class="example-img"></div>
+						<img src="img/@1x/logo.png" alt="logo" class="example-img">
+					</div>
 					<nav class="header__nav nav" id="fixed-top-nav">
 						<ul class="nav__list">
 							<li class="nav__item nav__item-current">
@@ -121,8 +122,7 @@
 							</button>
 						</form>
 					</div>
-				</div>
-				<!-- .header__navbar_bottom -->
+				</div><!-- .header__navbar_bottom -->			
 			</div>
 			<!-- .container-->
 		</header>
@@ -134,7 +134,7 @@
 							<li>
 								<a href="#">Домой</a>
 							</li>
-							<li class="active">Галерея</li>
+							<li>Галерея</li>
 						</ul>
 					</div>
 				</div>
@@ -143,7 +143,13 @@
 						<div class="widget">
 							<h3>Категории товаров</h3>
 							<ul class="products-categories">
-								<li><a href="#">камеры</a></li>
+								<li><a href="#">камеры</a>
+									<ul class="products-categories__submenu">
+										<li><a href="#">subcat1</a></li>
+										<li><a href="#">subcat2</a></li>
+										<li><a href="#">subcat3</a></li>
+										<li><a href="#">subcat4</a></li>
+									</ul></li>
 								<li><a href="#">смартфоны</a></li>
 								<li><a href="#">телевизоры</a></li>
 								<li><a href="#">планшеты</a></li>
@@ -154,7 +160,7 @@
 							<h3>Комментарии клиентов</h3>
 							<div class="comments">
 								<div class="comments__comment">
-									<figure class="thumbnail-primary comments__thumb"><img src="img/@1x/user-default.png" alt="аватар" class="avatar"></figure>
+									<figure class="thumbnail-primary comments__thumb"><img src="img/@1x/user-default.png" alt="аватар" class="avatar example-img"></figure>
 									<div class="comments__meta-info">
 										<i class="icon-calendar"></i>
 										<date>май 12, 2018</date>
@@ -163,7 +169,7 @@
 									<p class="comments__txt"><a href="" title="пройдите по этому комментарию">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum maxime ullam neque eius ipsam repellendus corporis, consequatur corrupti ex, et exercitationem itaque. Voluptate, minima eos.</a></p>
 								</div>
 								<div class="comments__comment">
-									<figure class="thumbnail-primary comments__thumb"><img src="img/@1x/user-default.png" alt="аватар" class="avatar"></figure>
+									<figure class="thumbnail-primary comments__thumb"><img src="img/@1x/user-default.png" alt="аватар" class="avatar example-img"></figure>
 									<div class="comments__meta-info">
 										<i class="icon-calendar"></i>
 										<date>май 12, 2018</date>
@@ -172,7 +178,7 @@
 									<p class="comments__txt"><a href="" title="пройдите по этому комментарию">Temporibus quam illo soluta, aspernatur voluptatibus! Nihil magnam, quidem rem dolores esse velit facilis, in soluta, pariatur temporibus illo laborum iste iusto ab, voluptatem eaque.</a></p>
 								</div>
 								<div class="comments__comment">
-									<figure class="thumbnail-primary comments__thumb"><img src="img/@1x/user-default.png" alt="аватар" class="avatar"></figure>
+									<figure class="thumbnail-primary comments__thumb"><img src="img/@1x/user-default.png" alt="аватар" class="avatar example-img"></figure>
 									<div class="comments__meta-info">
 										<i class="icon-calendar"></i>
 										<date>май 12, 2018</date>
@@ -190,6 +196,25 @@
 						<div class="row">
 							<div class="col-md-4">
 								<p class="result-count">показано 1-6 из 12</p>
+								<form action="#" method="post" class="product-count">
+									<select name="product-count">
+										<option value="15" selected="selected">
+											выбрать 15
+										</option>
+										<option value="25">
+											выбрать 25
+										</option>
+										<option value="30">
+											выбрать 30
+										</option>
+										<option value="45">
+											выбрать 45
+										</option>
+										<option value="50">
+											выбрать 50
+										</option>
+									</select>
+								</form>
 							</div>
 							<div class="col-md-4 offset-md-4">
 								<form action="#" method="post" class="ordering">
@@ -223,14 +248,15 @@
 											<img src="img/@1x/hp-probook-x360-440-g1.png" alt="изображение товара" class="example-img"></a>
 									</div>
 									<div class="star-rating">
-										<div class="star-rating__bg" style="width:90%">
+										<div class="star-rating__bg" data-rating="0">
 											<div class="star-rating__stars"></div>
 										</div>
 									</div>
 									<div class="addon-product__list-links">
-										<a href="#" class="addon-product__list-link addon-quick-view">
+										<div href="#" class="addon-product__list-link addon-quick-view">
 											<span class="tooltip-inner">показать</span>
-										</a>
+											<span class="addon-product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi nesciunt adipisci, soluta unde praesentium quidem ullam aut qui, earum alias, incidunt tempore dolores illum, ipsum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi nesciunt adipisci, soluta unde praesentium quidem ullam aut qui, earum alias, incidunt tempore dolores illum, ipsum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi nesciunt adipisci, soluta unde praesentium quidem ullam aut qui, earum alias, incidunt tempore dolores illum, ipsum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi nesciunt adipisci, soluta unde praesentium quidem ullam aut qui, earum alias, incidunt tempore dolores illum, ipsum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi nesciunt adipisci, soluta unde praesentium quidem ullam aut qui, earum alias, incidunt tempore dolores illum, ipsum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi nesciunt adipisci, soluta unde praesentium quidem</span>
+										</div>
 										<a href="#" class="addon-product__list-link addon-open-cart">
 											<span class="tooltip-inner">перейти в корзину</span>
 										</a>
@@ -260,14 +286,15 @@
 											<img src="img/@1x/hp-probook-x360-440-g1.png" alt="изображение товара" class="example-img"></a>
 									</div>
 									<div class="star-rating">
-										<div class="star-rating__bg" style="width:90%">
+										<div class="star-rating__bg" data-rating="0">
 											<div class="star-rating__stars"></div>
 										</div>
 									</div>
 									<div class="addon-product__list-links">
-										<a href="#" class="addon-product__list-link addon-quick-view">
+										<div href="#" class="addon-product__list-link addon-quick-view">
 											<span class="tooltip-inner">показать</span>
-										</a>
+											<span class="addon-product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae expedita ipsa facere repellendus assumenda, impedit incidunt. Iste nemo ratione ipsam fugiat, nobis aspernatur! Quae, accusamus!</span>
+										</div>
 										<a href="#" class="addon-product__list-link addon-open-cart">
 											<span class="tooltip-inner">перейти в корзину</span>
 										</a>
@@ -297,14 +324,15 @@
 											<img src="img/@1x/hp-probook-x360-440-g1.png" alt="изображение товара" class="example-img"></a>
 									</div>
 									<div class="star-rating">
-										<div class="star-rating__bg" style="width:90%">
+										<div class="star-rating__bg" data-rating="0">
 											<div class="star-rating__stars"></div>
 										</div>
 									</div>
 									<div class="addon-product__list-links">
-										<a href="#" class="addon-product__list-link addon-quick-view">
+										<div href="#" class="addon-product__list-link addon-quick-view">
 											<span class="tooltip-inner">показать</span>
-										</a>
+											<span class="addon-product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam facilis minus sed, optio impedit aspernatur, dolores perspiciatis veritatis blanditiis numquam excepturi aliquam itaque sit! Quia.</span>
+										</div>
 										<a href="#" class="addon-product__list-link addon-open-cart">
 											<span class="tooltip-inner">перейти в корзину</span>
 										</a>
@@ -334,14 +362,15 @@
 											<img src="img/@1x/hp-probook-x360-440-g1.png" alt="изображение товара" class="example-img"></a>
 									</div>
 									<div class="star-rating">
-										<div class="star-rating__bg" style="width:90%">
+										<div class="star-rating__bg" data-rating="0">
 											<div class="star-rating__stars"></div>
 										</div>
 									</div>
 									<div class="addon-product__list-links">
-										<a href="#" class="addon-product__list-link addon-quick-view">
+										<div href="#" class="addon-product__list-link addon-quick-view">
 											<span class="tooltip-inner">показать</span>
-										</a>
+											<span class="addon-product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio consectetur numquam sequi, velit in nesciunt, libero laborum consequatur vitae id sapiente dolorem suscipit ducimus omnis!</span>
+										</div>
 										<a href="#" class="addon-product__list-link addon-open-cart">
 											<span class="tooltip-inner">перейти в корзину</span>
 										</a>
@@ -371,14 +400,15 @@
 											<img src="img/@1x/hp-probook-x360-440-g1.png" alt="изображение товара" class="example-img"></a>
 									</div>
 									<div class="star-rating">
-										<div class="star-rating__bg" style="width:90%">
+										<div class="star-rating__bg" data-rating="0">
 											<div class="star-rating__stars"></div>
 										</div>
 									</div>
 									<div class="addon-product__list-links">
-										<a href="#" class="addon-product__list-link addon-quick-view">
+										<div href="#" class="addon-product__list-link addon-quick-view">
 											<span class="tooltip-inner">показать</span>
-										</a>
+											<span class="addon-product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium a rem nesciunt dolore sequi numquam eveniet voluptas vitae enim, recusandae suscipit sunt quos, obcaecati consectetur.</span>
+										</div>
 										<a href="#" class="addon-product__list-link addon-open-cart">
 											<span class="tooltip-inner">перейти в корзину</span>
 										</a>
@@ -408,14 +438,15 @@
 											<img src="img/@1x/hp-probook-x360-440-g1.png" alt="изображение товара" class="example-img"></a>
 									</div>
 									<div class="star-rating">
-										<div class="star-rating__bg" style="width:90%">
+										<div class="star-rating__bg" data-rating="0">
 											<div class="star-rating__stars"></div>
 										</div>
 									</div>
 									<div class="addon-product__list-links">
-										<a href="#" class="addon-product__list-link addon-quick-view">
+										<div href="#" class="addon-product__list-link addon-quick-view">
 											<span class="tooltip-inner">показать</span>
-										</a>
+											<span class="addon-product__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium a rem nesciunt dolore sequi numquam eveniet voluptas vitae enim, recusandae suscipit sunt quos, obcaecati consectetur.</span>
+										</div>
 										<a href="#" class="addon-product__list-link addon-open-cart">
 											<span class="tooltip-inner">перейти в корзину</span>
 										</a>
@@ -493,7 +524,7 @@
 	<script src="js/custom/jquery.hashchange.min.js"></script>
 	<script src="js/custom/jquery.easytabs.min.js"></script>
 	<script src="js/custom/slick.min.js"></script>
-	<script src="js/scripts.min.js"></script>
+	<script src="js/scripts.js"></script>
 	<link rel="stylesheet" href="css/animate.min.css">
 	<script src="js/wow.min.js"></script>
 	<script>new WOW().init();</script>

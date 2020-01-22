@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
    
     /**
-     * modla window
+     * modal window
      */
     $('.gallery-item__thumb img').on('click', function(event) {
     	event.preventDefault();
@@ -181,13 +181,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     	var thisImgSrc = $(this).attr('src');
     	var title = $(this).attr('alt');
-    	var modalImg = '<figure><img src="" alt="изображение">\
-			<figcaption></figcaption></figure>';
+    	var modalImg = '<figure><img><figcaption></figcaption></figure>\
+    	<div class="addon-product__description"></div>';
 		
 		$('.page-holder').css('overflow', 'hidden');
 		$('#modal-window .modal-window__content').prepend(modalImg);
-		$('#modal-window figure>img').attr('src', thisImgSrc);
+		$('#modal-window figure>img').attr({
+			src: thisImgSrc,
+			alt: title
+		});
 		$("#modal-window .modal-window__content figcaption").html(title);
+		$("#modal-window .addon-product__description").html('hello');
 		$('#modal-window').css({
 			display: 'block'
 		});
@@ -197,37 +201,56 @@ document.addEventListener("DOMContentLoaded", function() {
     	event.preventDefault();
     	createModalWindow();
 
+    	var productDescription = $(this).children('.addon-product__description').html();
+
     	var parent = $(this).closest('.addon-product');
     	var thisImg = $(parent).children('.addon-product__thumb-wrap').children('a').children('img');
     	var thisImgSrc = $(thisImg).attr('src');
     	var title = $(thisImg).attr('alt');
-    	var modalImg = '<figure><img src="" alt="изображение" class="img-responsive">\
-			<figcaption></figcaption></figure>';
+    	var modalImg = '<figure><img src="" alt="изображение" class="example-img">\
+			<figcaption></figcaption></figure><div class="addon-product__description"></div>';
 		
 		$('.page-holder').css('overflow', 'hidden');
 		$('#modal-window .modal-window__content').prepend(modalImg);
-		$('#modal-window figure>img').attr('src', thisImgSrc);
+
+		$('#modal-window .addon-product__description').html(productDescription);
+
+		$('#modal-window figure>img').attr({
+			src: thisImgSrc,
+			alt: title
+		});
 		$("#modal-window .modal-window__content figcaption").html(title);
 		$('#modal-window').css({
 			display: 'block'
 		});
-    	
+
+		$('.page-holder').css({
+			position: 'fixed',
+		});  	
     });        
 
     function createModalWindow() {    	
     	var modalWindow = '<div id="modal-window" class="modal-window">\
     	<div class="modal-window__wrap"><div class="modal-window__content">\
-    	</div></div></div>';    	
+    	</div><span class="modal-window__close"><i class="icon-close"></i></span></div></div>';    	
 
     	$('.page-holder').prepend(modalWindow);
 
     	$('#modal-window').on('click', function(event) {
-    		event.preventDefault();
-    		$(this).css('display', 'none');
-    		$(this).remove();
-    		$('body').css('overflow', 'auto');
-    	});
+			event.preventDefault();
+
+			$(this).css('display', 'none');
+			$(this).remove();
+			$('body').css('overflow', 'auto');
+
+			$('.page-holder').css({
+				position: 'static',
+			});
+
+		});    	
     }
+
+    
 
     /**
      * tabs

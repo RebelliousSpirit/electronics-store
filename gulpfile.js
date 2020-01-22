@@ -16,7 +16,7 @@ gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
 			baseDir: 'app',
-			index: 'index.html'
+			index: 'shop.html'
 		},
 		notify: false,
 		// online: false, // Work offline without internet connection
