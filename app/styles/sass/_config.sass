@@ -1,0 +1,107 @@
+// User variables:
+$accent: #42244A
+$text: #3E3940
+$text-light: #7C7180
+$title: #000
+$link: #7C7180
+$hover: #E0CCE6
+$border: #E0CCE6
+$border-dark: #3E3940
+$btn-bg: #3E3940
+$btn-bg-hover: #E0CCE6
+$btn-color: #7C7180
+$bg-primary: #fff
+$bg-second: #F9E3FF
+$bg-dark-rgba: rgba(62,57,64, 0.8)
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// // Breakpoints mixin settings (node_modules/bootstrap/scss/mixins/_breakpoints.scss)
+// // Example: +media-breakpoint-down(xs) - ≥576px / +media-breakpoint-up(sm) - // ≤576px
+// // Default variables: node_modules/bootstrap/scss/_variables.scss
+// $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss" // Bootstrap Reboot collection
+@import "../../node_modules/bootstrap/scss/mixins/_breakpoints.scss" // Bootstrap Breakpoints mixin
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss" // Optional Bootstrap Grid
+// @import "../../node_modules/bootstrap/scss/utilities/_sizing.scss" // Optional Bootstrap Utilites
+
+// @import "../../node_modules/normalize.css/normalize.css" // CSS library plug-in example (npm i --save-dev normalize.css)
+
+
+// font-weight helper:
+// font-family: 'PT Sans', sans-serif;
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+@mixin font($f-name, $f-style, $f-weight, $f-url)
+	@font-face
+		font-family: $f-name
+		font-style: $f-style
+		font-weight: $f-weight
+		src: url($f-url) format('woff2')
+
+
+@include font('PT Sans', normal, 400, '../fonts/ptsans-400-normal.woff2')
+@include font('PT Sans', italic, 400, '../fonts/ptsans-400-italic.woff2')
+@include font('PT Sans', normal, 700, '../fonts/ptsans-700-normal.woff2')
+@include font('PT Sans', italic, 700, '../fonts/ptsans-700-italic.woff2')
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 14px
+	min-width: 320px
+	line-height: 17px
+	font-family: 'PT Sans', sans-serif
+	overflow-x: hidden
+	color: $text
+	background-color: $bg-primary
+	text-align: left
+a
+	color: $link
+	transition: 0.3s ease
+	&:hover, &:focus, &:active
+		color: $hover
+		text-decoration: none	
+
+
+ul, li
+	list-style: none
+
+button:focus
+	outline: none
+
+h1, h2, h3, h4, h5
+	color: $title
+	font-weight: 700
+	margin-bottom: 20px
+
+select
+	max-width: 100%
+	border: 1px solid $border
+	&:focus
+		outline: none
