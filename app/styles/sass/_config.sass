@@ -23,12 +23,12 @@ $gutter: $grid-gutter-width
 // // Default variables: node_modules/bootstrap/scss/_variables.scss
 // $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
 
-@import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss" // Bootstrap Reboot collection
-@import "../../node_modules/bootstrap/scss/mixins/_breakpoints.scss" // Bootstrap Breakpoints mixin
-@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss" // Optional Bootstrap Grid
-// @import "../../node_modules/bootstrap/scss/utilities/_sizing.scss" // Optional Bootstrap Utilites
+@import "node_modules/bootstrap/scss/bootstrap-reboot.scss" // Bootstrap Reboot collection
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss" // Bootstrap Breakpoints mixin
+@import "node_modules/bootstrap/scss/bootstrap-grid.scss" // Optional Bootstrap Grid
+// @import "node_modules/bootstrap/scss/utilities/_sizing.scss" // Optional Bootstrap Utilites
 
-// @import "../../node_modules/normalize.css/normalize.css" // CSS library plug-in example (npm i --save-dev normalize.css)
+// @import "node_modules/normalize.css/normalize.css" // CSS library plug-in example (npm i --save-dev normalize.css)
 
 
 // font-weight helper:
@@ -84,10 +84,10 @@ body
 a
 	color: $link
 	transition: 0.3s ease
+	cursor: pointer	
 	&:hover, &:focus, &:active
 		color: $hover
-		text-decoration: none	
-
+		text-decoration: none
 
 ul, li
 	list-style: none

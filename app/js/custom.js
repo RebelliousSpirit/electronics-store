@@ -11,12 +11,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		arrows: false,
 		dotsClass: "main-slider__dots",
 	});
+
 	$('.main-slider__dots li button').html('');
 	
 	/**
 	 * dropdown menu in the header
 	 */
 	(function () {
+		
 		var touch = $('.dropdown-btn');
 		var menuWrapper = $('.dropdown');
 		var dropdownMenu = $('.dropdown-menu');
@@ -47,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 
 		});
+
 	})();	
 
 	/**
@@ -174,13 +177,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		});    	
     }
-
     
 
     /**
      * tabs
      */
     $('#tab-side-container').easytabs();
+    
     /**
      * magnifying glass effect when hovering over an image on the product page
      */
@@ -202,9 +205,10 @@ document.addEventListener("DOMContentLoaded", function() {
     
    
 	/**
-	 * 
+	 * the slider on the page product.html 
 	 */
    	$('.addon-product__images-item img').on('click', function () {
+   		
    		var imgSrc = $(this).attr('src');
    		
    		$('.addon-product__image_large img').attr({
